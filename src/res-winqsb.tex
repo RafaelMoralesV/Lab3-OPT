@@ -1,3 +1,36 @@
 \section{Resolución via Software}
+Generaremos un nuevo problema en el software WinQSB, utilizando la aplicación de análisis de decisión. Este problema consta de una tabla de beneficios, por lo que nuestra selección al momento de generar las especificaciones del problema será de \quotes{Payoff Table Analysis}, utilizando 2 estados de la naturaleza (Que representarán alta y baja demanda) y 3 decisiones (Que representan la construcción de un edificio pequeño, mediano y grande).
+
+\insertimage[\label{img:winqsb1}]{img/winqsb/1.png}{scale=1}{Especificación del problema}
+
+Al apretar \quotes{OK} en el programa se nos presenta una tabla de decisión estado tal como la que se entregó en el capítulo introductorio, con la fila adicional de probabilidades previas, que será rellenada con la información provista en la resolución analítica, bajo el sub-capítulo de análisis bajo riesgo (Probabilidad de un 80\% para la alta demanda, y un 20\% para la baja).
+
+\insertimage[\label{img:winqsb2}]{img/winqsb/2.png}{scale=1}{Tabla de decisión y estado de naturaleza}
+
+La generación de un análisis nuevo nos presenta con una nueva pantalla emergente que despliega todos los criterios aplicables. Esta pantalla se dejará por defecto, y se continuará presionando el botón \quotes{OK}.
+
+\insertimage[\label{img:winqsb3}]{img/winqsb/3.png}{scale=1}{Criterios presentados por WinQSB}
+
+La tabla que se presenta a continuación nos muestra los resultados de cada criterio\footnote{Recordar que para este programa, las decisión 1 corresponde al edificio pequeño, la decisión 2, al edificio mediano, y finalmente la 3, equivale al edificio grande.}. \quotes{Maximin} corresponde a el criterio pesimista, \quotes{Maximax}, al criterio optimista. \quotes{Minimax Regret} corresponde a la matriz de arrepentimiento\footnote{La matriz de arrepentimiento misma puede ser encontrada en la figura \ref{img:winqsb6}.}. \quotes{Expected value} es el valor encontrado en nuestro análisis bajo riesgo. Finalmente, en las últimas 3 filas, se encuentra nuevamente el valor esperado sin información perfecta, nuevamente, correspondiente a nuestro análisis bajo riesgo. Adicionalmente está el valor esperado con información perfecta y valor esperado de la información perfecta en sí, que fueron calculados en el sub-capítulo siguiente.
+
+Los criterios de \quotes{Hurwicz}, \quotes{Equal likelihood} y \quotes{expected regret} no han sido desarrollados en la resolución analítica.
+
+\insertimage[\label{img:winqsb4}]{img/winqsb/4.png}{scale=1}{Tabla de criterios, con la mejor decisión generada para cada uno}
+
+Podemos expandir el análisis de la tabla anterior con un análisis por decisión de cada uno de los criterios anteriormente explicados, generado automáticamente por el software y dispuesto a continuación:
+
+\insertimage[\label{img:winqsb5}]{img/winqsb/5.png}{width=\textwidth}{Análisis de cada decisión. Con \quotes{**} se presenta el valor seleccionado para ese criterio.}
+
+Para el caso de la matriz de arrepentimiento misma, que es generada por el software, se encuentra dispuesta aquí:
+
+\insertimage[\label{img:winqsb6}]{img/winqsb/6.png}{scale=1}{Matriz de arrepentimiento}
+
+Es posible, además, generar un gráfico para el árbol de decisión. La siguiente pantalla emergente presenta opciones para esto, pero para efectos de este trabajo se han dejado por defecto.
+
+\insertimage[\label{img:winqsb7}]{img/winqsb/7.png}{scale=0.6}{Generación de árbol de decisión.}
+
+El gráfico del árbol de decisión generado se encuentra a continuación:
+
+\insertimage[\label{img:winqsb8}]{img/winqsb/8.png}{scale=0.7}{Árbol de decisión}
 
 \pagebreak
