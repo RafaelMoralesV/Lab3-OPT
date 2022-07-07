@@ -57,9 +57,9 @@ Este criterio consta en buscar la decisión donde se pierda menos beneficio entr
         \cline{2-3}
         \multicolumn{1}{l|}{}                                   & \multicolumn{2}{l|}{\textbf{Estado de la naturaleza}}                                     \\ \hline
         \multicolumn{1}{|l|}{\textbf{Alternativas de Decisión}} & \multicolumn{1}{l|}{Alta Demanda}                     & \multicolumn{1}{l|}{Baja Demanda} \\ \hline
-        \multicolumn{1}{|r|}{Edif. Pequeño}                     & \multicolumn{1}{c|}{8 - 8}                            & {\color[HTML]{333333} 8 - 7}      \\
-        \multicolumn{1}{|r|}{Edif. Mediano}                     & \multicolumn{1}{c|}{14 - 14}                          & 14 - 5                            \\
-        \multicolumn{1}{|r|}{Edif. Grande}                      & \multicolumn{1}{c|}{{\color[HTML]{333333} 20 - 20}}   & 20 - (-9)                         \\ \hline
+        \multicolumn{1}{|r|}{Edif. Pequeño}                     & \multicolumn{1}{c|}{20 - 8}                           & {\color[HTML]{333333} 7 - 7}      \\
+        \multicolumn{1}{|r|}{Edif. Mediano}                     & \multicolumn{1}{c|}{20 - 14}                          & 7 - 5                             \\
+        \multicolumn{1}{|r|}{Edif. Grande}                      & \multicolumn{1}{c|}{{\color[HTML]{333333} 20 - 20}}   & 7 - (-9)                          \\ \hline
     \end{tabular}
 \end{table}
 
@@ -70,13 +70,13 @@ La tabla final, que llamaremos matriz de arrepentimiento, se ve de la siguiente 
         \cline{2-3}
         \multicolumn{1}{l|}{}                                   & \multicolumn{2}{l|}{\textbf{Estado de la naturaleza}}                                     \\ \hline
         \multicolumn{1}{|l|}{\textbf{Alternativas de Decisión}} & \multicolumn{1}{l|}{Alta Demanda}                     & \multicolumn{1}{l|}{Baja Demanda} \\ \hline
-        \multicolumn{1}{|r|}{Edif. Pequeño}                     & \multicolumn{1}{c|}{0}                                & {\color[HTML]{333333} 1}          \\
-        \multicolumn{1}{|r|}{Edif. Mediano}                     & \multicolumn{1}{c|}{0}                                & 9                                 \\
-        \multicolumn{1}{|r|}{Edif. Grande}                      & \multicolumn{1}{c|}{{\color[HTML]{333333} 0}}         & 29                                \\ \hline
+        \multicolumn{1}{|r|}{Edif. Pequeño}                     & \multicolumn{1}{c|}{12}                               & {\color[HTML]{333333} 0}          \\
+        \multicolumn{1}{|r|}{Edif. Mediano}                     & \multicolumn{1}{c|}{6}                                & 2                                 \\
+        \multicolumn{1}{|r|}{Edif. Grande}                      & \multicolumn{1}{c|}{{\color[HTML]{333333} 0}}         & 16                                \\ \hline
     \end{tabular}
 \end{table}
 
-Nuestra decisión será aquella con el valor más bajo distinto de cero. Para el caso, esta corresponde al edificio pequeño.
+Nuestra decisión será guiada por el criterio Minimax. Para el caso, esta corresponde al edificio mediano.
 
 \subsection{Análisis bajo riesgo}
 A diferencia del análisis bajo incertidumbre, en el análisis bajo riesgo se conoce la "probabilidad" de cada estado de la naturaleza. La estrategia de resolución, entonces, es idéntica al criterio de Laplace que se utilizó anteriormente \refeq{eqn:laplace}, solo que la probabilidad de los estados de la naturaleza no necesariamente son equiprobable.
@@ -114,19 +114,19 @@ Se generarán gráficas para funciones lineales correspondientes al valor espera
 \insertaligned[\label{eqn:graf-d1}]{
     V_{d1} &= 8 \cdot p + 7 \cdot (1 - p) \\
     V_{d1} &= 8p + 7 - 7p \\
-    V_{d1} &= p + 7
+    \mathbf{V_{d1}} &= \mathbf{p + 7}
 }
 
 \insertaligned[\label{eqn:graf-d2}]{
     V_{d1} &= 14 \cdot p + 5 \cdot (1 - p) \\
     V_{d1} &= 14p + 5 - 5p \\
-    V_{d1} &= 9p + 5
+    \mathbf{V_{d1}} &= \mathbf{9p + 5}
 }
 
 \insertaligned[\label{eqn:graf-d3}]{
     V_{d1} &= 20 \cdot p + -9 \cdot (1 - p) \\
     V_{d1} &= 20p - 9 + 9p \\
-    V_{d1} &= 29p - 9
+    \mathbf{V_{d1}} &= \mathbf{29p - 9}
 }
 
 \begin{figure}[!h]
@@ -155,14 +155,14 @@ Podemos encontrar estos puntos igualando las ecuaciones, tal que:
     V_{d_1} &= V_{d_2}   \\
     p + 7 &= 9p + 5      \\
     8p &= 2              \\
-    p &= 0.25
+    \mathbf{p} &= \mathbf{0.25}
 }
 
 \insertaligned[\label{eqn:d2d3}]{
     V_{d_2} &= V_{d_3}   \\
     9p + 5  &= 29p - 9   \\
     20p &= 14              \\
-    p &= 0.7
+    \mathbf{p} &= \mathbf{0.7}
 }
 
 Tenemos entonces, a partir de estos resultados y un poco de análisis del gráfico antes entregado, las siguientes situaciones:
